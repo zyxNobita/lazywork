@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion TARGET_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+            java {
+                srcDir 'src/main/java'
+            }
+            res {
+                srcDir 'src/main/res'
+            }
+        }
+    }
+}
+
+dependencies {
+    compile SUPPORT_ANNOTATIONS
+    compile SUPPORT_V4_SUPPORT
+}
