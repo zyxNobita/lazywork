@@ -31,17 +31,16 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.R;
+
+import im.wait.lazywork.R;
 
 @SuppressLint("ViewConstructor")
 public class IndicatorLayout extends FrameLayout implements AnimationListener {
 
 	static final int DEFAULT_ROTATION_ANIMATION_DURATION = 150;
-
+	private final Animation mRotateAnimation, mResetRotateAnimation;
 	private Animation mInAnim, mOutAnim;
 	private ImageView mArrowImageView;
-
-	private final Animation mRotateAnimation, mResetRotateAnimation;
 
 	public IndicatorLayout(Context context, PullToRefreshBase.Mode mode) {
 		super(context);

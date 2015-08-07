@@ -25,7 +25,8 @@ import android.widget.ImageView.ScaleType;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Orientation;
-import com.handmark.pulltorefresh.library.R;
+
+import im.wait.lazywork.R;
 
 public class RotateLoadingLayout extends LoadingLayout {
 
@@ -33,10 +34,8 @@ public class RotateLoadingLayout extends LoadingLayout {
 
 	private final Animation mRotateAnimation;
 	private final Matrix mHeaderImageMatrix;
-
-	private float mRotationPivotX, mRotationPivotY;
-
 	private final boolean mRotateDrawableWhilePulling;
+	private float mRotationPivotX, mRotationPivotY;
 
 	public RotateLoadingLayout(Context context, Mode mode, Orientation scrollDirection, TypedArray attrs) {
 		super(context, mode, scrollDirection, attrs);

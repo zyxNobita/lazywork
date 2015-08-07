@@ -38,7 +38,8 @@ import android.widget.TextView;
 import com.handmark.pulltorefresh.library.ILoadingLayout;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Orientation;
-import com.handmark.pulltorefresh.library.R;
+
+import im.wait.lazywork.R;
 
 @SuppressLint("ViewConstructor")
 public abstract class LoadingLayout extends FrameLayout implements ILoadingLayout {
@@ -46,20 +47,14 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
 	static final String LOG_TAG = "PullToRefresh-LoadingLayout";
 
 	static final Interpolator ANIMATION_INTERPOLATOR = new LinearInterpolator();
-
-	private FrameLayout mInnerLayout;
-
 	protected final ImageView mHeaderImage;
 	protected final ProgressBar mHeaderProgress;
-
-	private boolean mUseIntrinsicAnimation;
-
-	private final TextView mHeaderText;
-	private final TextView mSubHeaderText;
-
 	protected final Mode mMode;
 	protected final Orientation mScrollDirection;
-
+	private final TextView mHeaderText;
+	private final TextView mSubHeaderText;
+	private FrameLayout mInnerLayout;
+	private boolean mUseIntrinsicAnimation;
 	private CharSequence mPullLabel;
 	private CharSequence mRefreshingLabel;
 	private CharSequence mReleaseLabel;
