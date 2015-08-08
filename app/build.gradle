@@ -22,6 +22,6 @@ android {
 }
 
 dependencies {
-    compile SUPPORT_ANNOTATIONS
-    compile SUPPORT_V4_SUPPORT
+//    compile SUPPORT_ANNOTATIONS
+//    compile SUPPORT_V4_SUPPORT
 }
